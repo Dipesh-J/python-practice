@@ -145,3 +145,161 @@ print("This is a {teststring}".format(teststring="test", testing="Test"))
 thisList = ["apple", "banana", "cherry"]
 a, b, c = thisList
 print(a, b, c)
+
+# List - ordered - Changeable - Allows Duplicates
+# Tuple - ordered - Unchangeable - Allows Duplicates
+# Set - unordered - unchangeable - No Duplicates
+# Dictionary - ordered - changeable - No Duplicates
+
+
+# Negative Indexing in Python
+
+thisList = thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+
+
+print(thisList[-1])  # Prints the last element
+
+print(thisList[:4])  # start to 3rd index
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "melon", "mango"]
+print(thislist[2:])  # from 2nd(included) element to the end
+
+print(thisList[-4:-1])  # from 4th(included) element to second last element
+
+thislist = ["apple", "banana", "cherry", "orange", "kiwi", "mango"]
+thislist[1:3] = ["blackcurrant", "watermelon"]  # replace or adds elements
+print(thislist)
+
+thisList.insert(2, "Pumpkin")  # inserts at index 2
+thisList.append("Pumpkin")  # adds at the end
+
+thislist = ["apple", "banana", "cherry"]
+tropical = ["mango", "pineapple", "papaya"]
+thislist.extend(tropical)  # Merge two Lists/tuple/Dictionary/Sets
+print(thislist)
+
+thisList = ["apple", "banana", "cherry", "banana"]
+thisList.remove("banana")  # remove every occurance of banana
+
+thisList.clear()  # clear the list
+del thisList  # delete the list
+
+thisList = ["apple", "banana", "cherry"]
+
+# Loopig over the list
+for x in thisList:
+    print(x)
+
+# Looping with index
+for x in range(len(thisList)):
+    print(x)
+
+i = 0
+while i < len(thisList):
+    print(thisList[i])
+    i += 1
+
+[print(x) for x in thislist]  # shorthand
+
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+newlist = []
+
+for x in fruits:
+    if "a" in x:
+        newlist.append(x)
+
+print(newlist)
+
+
+fruits = ["apple", "banana", "cherry", "kiwi", "mango"]
+
+newlist = [x for x in fruits if "a" in x]  # shorthand
+# newlist = [expression for item in iterable if condition == True] syntax
+print(newlist)
+
+thisList.sort()  # sort alphanumerically
+thisList.sort(reverse=True)  # revere sort
+
+
+def myfunc(n):
+    return abs(n - 50)
+
+
+thislist = [100, 50, 65, 82, 23]
+thislist.sort(key=myfunc)
+print(thislist)
+
+# By default sort is case sensitive  and Upper case are sorted before lower case
+
+thisList.sort(key=str.lower)  # key = function not function call
+
+# making copies of lists
+thisList = ["apple", "banana", "cherry"]
+mylist = thisList.copy()
+mylist = list(thisList)
+mylist = thisList[:]
+
+# join two lists
+
+list1 = ["a", "b", "c"]
+list2 = [1, 2, 3]
+
+list3 = list1 + list2
+# list1.extend(list2) -> combines list in list1
+
+print(list3)
+# trying using shorthand
+list4 = ["a", "b", "c"]
+list5 = [1, 2, 3]
+[list4.append(x) for x in list5]
+
+print(list4)
+
+
+# Tuple
+
+
+thistuple = ("apple", "banana", "cherry", "apple", "cherry")
+
+# create a tuple
+thisTuple = tuple(("a", True, 3))
+# All the same way to access the variables and Iteration
+# You can't update a tuple, you can just convert it to list and then update it
+# Also s = ("apple") -> this is not a tuple but a string
+# s = ("apple",) -> this is a tuple. Notice the comma at the end
+x = ("apple", "banana", "cherry")
+y = list(x)
+y[1] = "kiwi"
+x = tuple(y)
+
+# Unpack a tuple
+
+fruits = ("apple", "banana", "cherry")
+
+(fruit1, fruit2, fruit3) = fruits
+print(fruit1, fruit2, fruit3)
+
+fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
+# Use * to assign red all the rest elements as a list
+(green, yellow, *red) = fruits
+
+print(green)
+print(yellow)
+print(red)
+
+tuple1 = ("a", "b", "c")
+tuple2 = (1, 2, 3)
+
+tuple3 = tuple1 + tuple2
+print(tuple3)
+
+
+fruits = ("apple", "banana", "cherry")
+mytuple = fruits * 2
+
+print(mytuple)
+
+# Methods of tuple
+
+# count() -> returns the number of times the value appears
+# index() -> returns the index of the first element with the specified value
