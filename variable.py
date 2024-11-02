@@ -303,3 +303,29 @@ print(mytuple)
 
 # count() -> returns the number of times the value appears
 # index() -> returns the index of the first element with the specified value
+
+
+######################   SETS  ###################################
+
+
+thisset = {"apple", "banana", "cherry"}
+
+# methods
+
+# add() -> adds an element to the set
+# clear() -> removes all elements from the set
+# copy() -> returns a copy of the set
+# difference() -> returns a set containing the difference between two or more sets
+# difference_update() -> removes the items in this set that are also included in another, specified set
+# *discard() -> removes the specified item
+# intersection() -> returns a set, that is the intersection of two other sets
+# intersection_update() -> removes the items in this set that are not present in other, specified set(s)
+# isdisjoint() -> returns whether two sets have a intersection or not
+# issubset() -> returns whether another set contains this set or not
+# issuperset() -> returns whether this set contains another set or not
+# *pop() -> removes any random element from the set as it is unordered
+# *remove() -> removes the specified element
+# symmetric_difference() -> returns a set with the symmetric differences of two sets
+# symmetric_difference_update() -> inserts the symmetric differences from this set and another
+# union() -> joins two sets, or more sets
+# *update() -> updates the set with the union of this set and other objects
